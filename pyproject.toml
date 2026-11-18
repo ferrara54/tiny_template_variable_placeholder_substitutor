@@ -1,0 +1,14 @@
+[project]
+name = "tiny-template-variable-placeholder-substitutor"
+version = "0.1.0"
+description = "Replaces ${name} and {{name}} placeholders in a string using a mapping of values, and raises a single error that lists every missing key."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
