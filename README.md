@@ -40,3 +40,10 @@ Only the two forms `${name}` and `{{name}}` are recognised. A single-brace
 form `{name}` is *not* a placeholder and is returned unchanged. Values are
 converted with `str`, so `None` becomes `"None"` and numbers become their
 decimal representation.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
